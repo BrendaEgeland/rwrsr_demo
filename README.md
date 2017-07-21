@@ -31,3 +31,11 @@ Gets as far as 'Yay! You're on Rails'
 * `rails g rspec:install`
 * Recall that we initialized the app with the -T option, so we don't need to remove any existing test settings or files.
 * `rspec` runs, but there is nothing to test yet.
+
+### Build first controller and demo page
+* `rails g controller Site index`
+* remove unneeded Site files, like .coffee, .scss, helpers, view tests (for now, at least)
+* `rspec` runs and passes with a single test
+* make site#index the root path (in routes.rb)
+* add `=javascript_pack_tag 'hello_react'` to site#index
+* webpacker is correctly adding 'Hello React!' to the page, which can be found at `/site/index` or root `/`.
