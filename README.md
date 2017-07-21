@@ -21,3 +21,7 @@ Could eventually make this one command using foreman (see https://github.com/rai
 -T flag prevents TestUnit from being installed, because we'll switch to Rspec in just a bit.
 
 Gets as far as 'Yay! You're on Rails'
+
+### Convert to Haml:
+* add `gem 'haml-rails'` to Gemfile
+* convert existing templates with `rake haml:erb2haml`
