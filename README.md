@@ -25,3 +25,9 @@ Gets as far as 'Yay! You're on Rails'
 ### Convert to Haml:
 * add `gem 'haml-rails'` to Gemfile
 * convert existing templates with `rake haml:erb2haml`
+
+### Use rspec for testing
+* add `gem 'rspec-rails'` to Gemfile for both test and development (needs to be in development so generators work)
+* `rails g rspec:install`
+* Recall that we initialized the app with the -T option, so we don't need to remove any existing test settings or files.
+* `rspec` runs, but there is nothing to test yet.
