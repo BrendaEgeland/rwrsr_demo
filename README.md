@@ -3,6 +3,7 @@
 ## Useful websites:
 
 * https://github.com/rails/webpacker
+* https://medium.com/@hpux/rails-5-1-loves-javascript-a1d84d5318b
 
 ## Run Instructions
 
@@ -11,12 +12,12 @@ Need to have a webpacker server as well as the rails servers, so in separate ter
 * `rails s`
 * `./bin/webpack-dev-server` 
 
-Could eventually make this one command using foreman (see https://github.com/rails/webpacker#webpack-dev-server).
+This will be changed to `heroku local` once Heroku and the Procfile are set up.
 
 ## Development history
 
 ### Initial install: 
-`rails new demo --webpack=react -T`
+`rails new rwrsr_demo --webpack=react -T`
 
 -T flag prevents TestUnit from being installed, because we'll switch to Rspec in just a bit.
 
@@ -39,3 +40,8 @@ Gets as far as 'Yay! You're on Rails'
 * make site#index the root path (in routes.rb)
 * add `=javascript_pack_tag 'hello_react'` to site#index
 * webpacker is correctly adding 'Hello React!' to the page, which can be found at `/site/index` or root `/`.
+
+### Set up for Heroku
+* For Heroku, we need to use Postgres, so change sqlite3 to pg by replacing the sqlite3 gem with pg, and then updating the database.yml file. 
+* Set up the database with `rails db:setup` and then `rails db:migrate`
+
