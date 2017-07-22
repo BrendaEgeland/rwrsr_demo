@@ -63,3 +63,8 @@ Gets as far as 'Yay! You're on Rails'
 * Get the Semantic UI stylesheets with `gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'`.
 * Rename the default `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and add a line to import the Semantic stylesheet: `@import "semantic-ui";`.
 * Add some sample components to `hello_react.jsx` and it works!
+
+### Add Redux
+First, move Hello to its own component, `app/javascripts/components/hello.jsx` so we can keep things nice and neat.
+
+
