@@ -85,4 +85,10 @@ Now put the parts together:
 * In the `hello_react.js` pack, call `HelloApp` instead of `Hello` and no longer pass a prop, since we'll get that from the store.
 * Add an input field to the Hello component and update the store every time it changes.
 
+Add testing for our React and Redux code:
+* `yarn add expect --dev`
+* `yarn add mocha --dev`
+* `yarn add react-addons-test-utils --dev`
+* Create tests for our React code in `app/javascript/tests`
+
 

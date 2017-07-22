@@ -1,6 +1,9 @@
 {
   "name": "rwrsr_demo",
   "private": true,
+  "scripts": {
+    "test": "mocha './app/javascript/tests/**/*.spec.js' --compilers js:babel-core/register"
+  },
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
@@ -41,6 +44,9 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.4.2",
+    "react-addons-test-utils": "^15.6.0",
     "webpack-dev-server": "^2.5.1"
   }
 }
