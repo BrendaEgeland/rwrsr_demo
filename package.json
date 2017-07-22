@@ -1,6 +1,9 @@
 {
   "name": "rwrsr_demo",
   "private": true,
+  "scripts": {
+    "test": "mocha './app/javascript/tests/**/*.spec.js' --compilers js:babel-core/register"
+  },
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
@@ -9,7 +12,9 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "coffee-loader": "^0.7.3",
     "coffee-script": "^1.12.7",
     "compression-webpack-plugin": "^1.0.0",
@@ -27,6 +32,9 @@
     "rails-erb-loader": "^5.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "semantic-ui-react": "^0.71.1",
@@ -36,6 +44,9 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.4.2",
+    "react-addons-test-utils": "^15.6.0",
     "webpack-dev-server": "^2.5.1"
   }
 }
