@@ -66,5 +66,18 @@ Gets as far as 'Yay! You're on Rails'
 
 ### Add Redux
 First, move Hello to its own component, `app/javascripts/components/hello.jsx` so we can keep things nice and neat.
+Then, we need to some more advanced ES6 features to make writing the reducers easier (specifically the spread operator for objects), so
+* `yarn add babel-preset-stage-0`
+* `yarn add babel-preset-es2015`
+
+And then add the presents to the `.babelrc` file.
+
+Next, start adding Redux: 
+* `yarn add redux`
+* `yarn add react-redux`
+* `yarn add redux-thunk` (middleware we'll need for async requests later on)
+* Create a 'settings' reducer and action.
+* Add the `app/javascripts/store` folder to set up the store. Note we are including thunk and the Chrome Redux extension.
+* Wire up the Provider for Redux to our root component, `app/javascripts/packs/hello_react.jsx`. The page should now load as it did before.
 
 
