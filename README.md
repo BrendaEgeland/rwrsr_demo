@@ -80,4 +80,9 @@ Next, start adding Redux:
 * Add the `app/javascripts/store` folder to set up the store. Note we are including thunk and the Chrome Redux extension.
 * Wire up the Provider for Redux to our root component, `app/javascripts/packs/hello_react.jsx`. The page should now load as it did before.
 
+Now put the parts together:
+* Create a container `app/javascripts/containers/HelloApp.js` for the Hello component that can connect our store and actions to the component. 
+* In the `hello_react.js` pack, call `HelloApp` instead of `Hello` and no longer pass a prop, since we'll get that from the store.
+* Add an input field to the Hello component and update the store every time it changes.
+
 
