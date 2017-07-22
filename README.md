@@ -63,3 +63,32 @@ Gets as far as 'Yay! You're on Rails'
 * Get the Semantic UI stylesheets with `gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'`.
 * Rename the default `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and add a line to import the Semantic stylesheet: `@import "semantic-ui";`.
 * Add some sample components to `hello_react.jsx` and it works!
+
+### Add Redux
+First, move Hello to its own component, `app/javascripts/components/hello.jsx` so we can keep things nice and neat.
+Then, we need to some more advanced ES6 features to make writing the reducers easier (specifically the spread operator for objects), so
+* `yarn add babel-preset-stage-0`
+* `yarn add babel-preset-es2015`
+
+And then add the presents to the `.babelrc` file.
+
+Next, start adding Redux: 
+* `yarn add redux`
+* `yarn add react-redux`
+* `yarn add redux-thunk` (middleware we'll need for async requests later on)
+* Create a 'settings' reducer and action.
+* Add the `app/javascripts/store` folder to set up the store. Note we are including thunk and the Chrome Redux extension.
+* Wire up the Provider for Redux to our root component, `app/javascripts/packs/hello_react.jsx`. The page should now load as it did before.
+
+Now put the parts together:
+* Create a container `app/javascripts/containers/HelloApp.js` for the Hello component that can connect our store and actions to the component. 
+* In the `hello_react.js` pack, call `HelloApp` instead of `Hello` and no longer pass a prop, since we'll get that from the store.
+* Add an input field to the Hello component and update the store every time it changes.
+
+Add testing for our React and Redux code:
+* `yarn add expect --dev`
+* `yarn add mocha --dev`
+* `yarn add react-addons-test-utils --dev`
+* Create tests for our React code in `app/javascript/tests`
+
+
