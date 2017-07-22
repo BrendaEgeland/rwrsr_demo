@@ -15,7 +15,7 @@ This project demonstrates how to set up Rails 5.1 with Webpacker so that we can 
 
 In addition, SemanticUI is available both in the React and Rails front ends. jQuery is required if using Rails front end pages, but the React/SemanticUI pages do not require jQuery.
 
-The development history below does not completely spell out each change, but rather is a commentary to following along the commit history of the project.
+The development history below does not completely spell out each step, but rather is a commentary to following along the commit history of the project.
 
 ## Run Instructions
 
@@ -29,11 +29,11 @@ This will be changed to `heroku local` once Heroku and the Procfile are set up.
 ## Development history
 
 ### Initial install: 
-Note: Our app name is **rwrsr_demo**. Use something else if you like and replacing accordingly in these instructions.
+Note: Our app name is **rwrsr_demo**. Use something else if you like and replace accordingly in these instructions.
 
 `rails new rwrsr_demo --webpack=react -T`
 
--T flag prevents TestUnit from being installed, because we'll switch to Rspec in just a bit.
+The -T flag prevents TestUnit from being installed, because we'll switch to Rspec in just a bit.
 
 *Hint: Add the '--database=postgresql' flag to the command above to save the conversion step later on. Run `rails db:setup` and `rails db:migrate` after the 'rails new' command completes.*
 
@@ -71,7 +71,7 @@ Gets as far as 'Yay! You're on Rails'
 ### Add Semantic UI
 * Add the Semantic UI React package with `yarn add semantic-ui-react`. (Note: using **yarn**, not **npm install**.)
 * Get the Semantic UI stylesheets with `gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'`.
-* Rename the default `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and add a line to import the Semantic stylesheet: `@import "semantic-ui";`.
+* Rename the default `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and add a line to import the Semantic styles: `@import "semantic-ui";`.
 * Add some sample components to `hello_react.jsx` and it works!
 
 ### Add Redux
@@ -100,12 +100,13 @@ Add testing for our React and Redux code:
 * `yarn add mocha --dev`
 * `yarn add react-addons-test-utils --dev`
 * Create tests for our React code in `app/javascript/tests`
+* Run with `npm test`.
 
 ### Create Rails Standard Asset Pipeline Front End Pages as Well
 * Semantic UI requires jQuery, so add jQuery to the Gemfile with `gem 'jquery-rails'`.
 * Add jQuery to application.js with `//= require jquery` and `//= require semantic-ui`.
 * Add a new page at `site/rails_only` using the code from https://semantic-ui.com/examples/sticky.html. Also add in the scss, javascript and images required.
-* In a real app, perhaps two different layouts could be used, on for React pages and one for Rails pages, so that jQuery
+* In a real app, perhaps two different layouts could be used, one for React pages and one for Rails pages, so that jQuery
  and other javascript doesn't need to load where not needed.
 
 
