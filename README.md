@@ -4,6 +4,8 @@
 
 * https://github.com/rails/webpacker
 * https://medium.com/@hpux/rails-5-1-loves-javascript-a1d84d5318b
+* https://react.semantic-ui.com/usage
+* https://github.com/doabit/semantic-ui-sass
 
 ## Run Instructions
 
@@ -55,3 +57,9 @@ Gets as far as 'Yay! You're on Rails'
 * Push code to Heroku with `git push heroku`. (See note https://devcenter.heroku.com/articles/git#deploying-code if deploying from a branch other than master.)
 * The app should now be accessible at https://rwrsr-demo.herokuapp.com/.
 * The local server can now be started with `heroku local` rather than having to start both the rails and webpacker servers in separate windows.
+
+### Add Semantic UI
+* Add the Semantic UI React package with `yarn add semantic-ui-react`. (Note: using **yarn**, not **npm install**.)
+* Get the Semantic UI stylesheets with `gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'`.
+* Rename the default `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and add a line to import the Semantic stylesheet: `@import "semantic-ui";`.
+* Add some sample components to `hello_react.jsx` and it works!
